@@ -1,0 +1,38 @@
+﻿@model ReaderModel
+
+@{
+    ViewData["Title"] = "Dodaj czytelnika";
+}
+
+<h1>Add</h1>
+
+
+<form method="post">
+    <div>
+        <label>Imię</label>
+        <input type="text" class="form-control" asp-for="Reader.Name" />
+    </div>
+    <div>
+        <label>Nazwisko</label>
+        <input type="text" class="form-control" asp-for="Reader.Surname" />
+    </div>
+    <div>
+        <label>Ulica</label>
+        <input type="text" class="form-control" asp-for="Reader.Street" />
+    </div>
+    <div>
+        <label>Numer budynku</label>
+        <input type="number" class="form-control" asp-for="Reader.StreetNumber" />
+    </div>
+    <div>
+        <label>Kod pocztowy</label>
+        <input type="number" class="form-control" asp-for="Reader.PostCode" />
+    </div>
+    <div>
+        <button type="submit" class="btn btn-outline-primary float-right">Zapisz</button>
+    </div>
+</form>
+
+
+
+

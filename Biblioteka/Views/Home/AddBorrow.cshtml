@@ -1,0 +1,31 @@
+﻿@model BorrowModel
+
+@{
+    ViewData["Title"] = "Dodaj wypożyczenie";
+}
+
+<h1>Add</h1>
+
+
+<form method="post">
+
+    <div>
+        <label>Książka</label>
+        <select class="form-control" asp-for="Borrow.Book" asp-items="ViewBag.Books"></select>
+    </div>
+    <div>
+        <label>Czytelnik</label>
+        <select class="form-control" asp-for="Borrow.Reader" asp-items="ViewBag.Readers"></select>
+    </div>
+    <div>
+        <label>Data wypożyczenia</label>
+        <input type="date" class="form-control" asp-for="Borrow.BorrowDate" />
+    </div>
+    <div>
+        <label>Data zwrotu</label>
+        <input type="date" class="form-control" asp-for="Borrow.ReturnDate" />
+    </div>
+    <div>
+        <button type="submit" class="btn btn-outline-primary float-right">Zapisz</button>
+    </div>
+</form>
